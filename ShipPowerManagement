@@ -1,0 +1,11 @@
+IF :jump==1 then :Generator=1 :jump=0 end
+IF :Generator==0 then m1="OFF" :Pwr=0 goto7 else goto3 end
+IF :Max==1 then m1="MAX" :Auto=0 :Pwr=100 goto7 else goto4 end
+IF :AUTO==1 then m1="Auto" goto6 else goto5 end
+m1="Cruise" :Pwr=70 goto7
+:Pwr=100-:Batt/100 goto7
+v1=:GenBank1 s1="PWR " t1="GenMAN" sk="\n"
+s2="Rad " v2=:Rad s3="Wat " v3=:Coolant mt="Mode "
+:__=t1+sk+sk+mt+m1+sk+sk+s1+v1+sk+s2+v2+sk+s3+v3
+IF :Batt<1000 then :FcuForward=0 end
+goto1
