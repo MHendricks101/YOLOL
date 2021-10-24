@@ -1,0 +1,20 @@
+IF :MLASER == 1 then goto2 else goto1 end
+:Turtle = 10
+IF :OSCIL == 1 then goto4 else goto20 end
+:T1Pitch = -6.8
+:T1Rotation = 6
+:T2Pitch = -6.8
+:T2Rotation = -6
+:T1Pitch = -5
+:T1Rotation = 3
+:T2Pitch = -5
+:T2Rotation = -3
+:T1Pitch = -6.8
+:T1Rotation = 6
+:T2Pitch = -6.8
+:T2Rotation = -6
+:T1Pitch = -6
+:T1Rotation = 4
+:T2Pitch = -6
+:T2Rotation = -4
+IF :Batt<750 then :Mlaser=0 :Collect=0 end
